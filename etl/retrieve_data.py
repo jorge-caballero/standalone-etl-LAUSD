@@ -37,7 +37,7 @@ def retrieve(current_date_prefix_str: str, dst_path_root_str: str, request_param
       local_error_list.append(filename)
       logger.error(f'Unexpected error encountered while retrieving `{filename}`\n')
   
-  print(f'\n  Data Transformation Summary:\n  =======')
+  print(f'\n  Data Retrieval Summary:\n  =======')
   if len(local_success_list) > 0:
     print(f'    Successful: ({len(local_success_list)}):')
     for item in local_success_list: print(f'      * {item}')

@@ -31,8 +31,12 @@ logger.add(sink=sys.stderr, level="TRACE", filter=my_filter, format=fmt, coloriz
 # Configure the parser
 yesterday = date.today() - timedelta(days=1)
 prefix_default = yesterday.strftime("%Y-%m-%dT2200")
+config_path_default = "./etl/public_etl_parameters.json"
 
 parser = argparse.ArgumentParser(description='Download and parse LAUSD COVID-19 data')
+
+parser.add_argument('--config_path', dest='etl_params_path', type=str, nargs='?', default=config_path_default,
+                    help=f'the path to the json file with the request parameters used to retrieve and transform the data (Default: "{config_path_default}"')
                     
 parser.add_argument('--prefix', dest='prefix', type=str, nargs='?', default=prefix_default,
                     help=f'the string that will be preppended to the filenames created during this run (Default: "{prefix_default}"')
@@ -52,12 +56,18 @@ args = parser.parse_args()
 def main():
   # Process the options
   filname_prefix = args.prefix
+  etl_params_path = args.etl_params_path if (args.etl_params_path is not None) else os.getenv('ETL_CONFIG_PATH')
   uri_root = args.base_path if (args.base_path is not None) else os.getenv('LOCAL_URI_ROOT')
   force_download = args.force_download if (args.force_download is not None) else False
   force_transform = args.force_transform if (args.force_transform is not None) else False
   
   if uri_root is None:
     logger.critical(f'Missing base path.\n')
+    raise Exception()
+  
+  etl_params = load(etl_params_path)
+  if etl_params is None:
+    logger.critical(f'Invalid request configuration.\n')
     raise Exception()
   
   archive_folder_path_str = f'{uri_root}/archive'
