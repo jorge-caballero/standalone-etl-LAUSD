@@ -185,7 +185,7 @@ Project Link: [https://github.com/jorge-caballero/standalone-etl-LAUSD](https://
 [issues-shield]: https://img.shields.io/github/issues/jorge-caballero/repo.svg?style=for-the-badge
 [issues-url]: https://github.com/jorge-caballero/standalone-etl-LAUSD/issues
 [license-shield]: https://img.shields.io/github/license/jorge-caballero/repo.svg?style=for-the-badge
-[license-url]: https://github.com/jorge-caballero/standalone-etl-LAUSD/blob/main/LICENSE.txt
+[license-url]: https://github.com/jorge-caballero/standalone-etl-LAUSD/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/datadrivenmd
 [demo-screenshot]: images/ExampleUsage-Dashboard.png
