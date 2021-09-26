@@ -167,7 +167,7 @@ Project Link: [https://github.com/jorge-caballero/standalone-etl-LAUSD](https://
 ## Acknowledgements
 
 * [@herf](https://github.com/herf) for putting the data into good use. Make sure to check out his [L.A. COVID repo](https://github.com/herf/la-covid), which includes more sources of COVID-19 data for the greater Los Angeles metro area
-* [@othneildrew](https://github.com/othneildrew) for the awesome [README template](https://github.com/othneildrew/Best-README-Template/blob/master/BLANK_README.md)
+* [@othneildrew](https://github.com/othneildrew) for the awesome [README template](https://github.com/othneildrew/Best-README-Template)
 * [Parents Supporting Teachers](https://twitter.com/pst4lapubliced) for using the data to [advocate on behalf of students and teachers](https://www.latimes.com/california/story/2021-08-23/frustrated-with-lausds-covid-19-reporting-system-a-parent-group-creates-their-own)
 
 
